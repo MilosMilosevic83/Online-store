@@ -1,0 +1,4 @@
+AuthName "store"
+AuthType Basic
+AuthUserFile /home/bluecubedev/public_html/store/.htpasswd
+require valid-user

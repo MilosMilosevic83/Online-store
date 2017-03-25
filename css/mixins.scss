@@ -1,0 +1,53 @@
+@mixin centered{
+	 width: 100%;
+  	max-width: 1010px;
+  	margin:0 auto;
+  
+}
+
+@mixin rounded ($radius){
+      -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin breakpoint($point) {
+			@if $point == biggest_screen {
+				@media (max-width: 1280px) { @content; }
+			}
+			@if $point == biggest_screen2{
+				@media (max-width: 1200px) { @content; }
+			}
+			@if $point == big_screen1 {
+				@media (max-width: 1020px) { @content; }
+			}
+			@else if $point == big_screen2 {
+				@media (max-width: 980px) { @content; }
+			}
+			@else if $point == big_screen3 {
+				@media (max-width: 900px) { @content; }
+			}
+			@else if $point == big_screen4 {
+				@media (max-width: 850px) { @content; }
+			}
+			@else if $point == medium_screen1 {
+				@media (max-width: 768px) { @content; }
+			}
+			@else if $point == medium_screen2 {
+				@media (max-width: 700px) { @content; }
+			}
+			@else if $point == medium_screen_extra {
+				@media (max-width: 650px) { @content; }
+			}
+			@else if $point == medium_screen3 {
+				@media (max-width: 480px) { @content; }
+			}
+			@else if $point == small_screen1 {
+				@media (max-width: 400px) { @content; }
+			}
+			@else if $point == small_screen_extra {
+				@media (max-width: 350px) { @content; }
+			}
+			@else if $point == small_screen2 {
+				@media (max-width: 320px) { @content; }
+			}
+		}
